@@ -1,0 +1,10 @@
+{
+    "disableEveryone": true,
+    "presence": {
+        "status": "idle",
+        "activity": {
+            "name": "Alpha 1.0",
+            "type": 1
+        }
+    }
+}
