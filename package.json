@@ -1,14 +1,14 @@
 {
-  "name": "saiku3",
-  "version": "1.0.0",
+  "name": "saiku",
+  "version": "0.0.3",
   "description": "THE REAL TIME RPG",
   "main": "index.js",
   "scripts": {
     "start": "node index",
-    "install": "npm i"
+    "build": "npm i"
   },
   "author": "Saitama",
-  "license": "ISC",
+  "license": "GNU Affero General Public License v3.0",
   "dependencies": {
     "colors": "^1.4.0",
     "discord.js": "github:discordjs/discord.js",
