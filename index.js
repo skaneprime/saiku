@@ -1,5 +1,6 @@
 
 const SaiKu = require('./assets/SaiKu');
+process.on('unhandledRejection', (reason) => SaiKu.log(reason.constructor.name, reason.stack));
 init().then((client) => {
     process.db.updateItemList();
     client.login('TokenOfSaiKu');

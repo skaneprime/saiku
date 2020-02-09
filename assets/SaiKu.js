@@ -15,11 +15,18 @@ let Config = {
     menu: require('./../config/menu/menu.json'),
     database: require('./../config/database')
 };
+function log(name, content) {
+    console.log(`\n[${name}] => `.red, content);
+    fs.appendFile(`./logs/errors/${name}.log`, `\n[${new Date().toISOString().replace(/T/, ' ').replace(/\..+/, '')}] => ${content}\n`, (err) => {
+        if(err) console.log(err);
+    });
+};
 
 module.exports = {
     Client,
     PlayerClass,
     InventoryClass,
     ModuleLoader,
-    Config
+    Config,
+    log
 }

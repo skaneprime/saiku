@@ -9,13 +9,8 @@ module.exports = (client) => {
                 require(`./modules/${files[i]}`)(client);
                 console.log(`[${mdl}] `.green + `${files[i]} Loaded`.yellow)
             } catch (err) { 
-                try {
-                    // require(`./modules/${files[i]}`)
-                    console.log(`[${mdl}] `.green + `${files[i]} is not Module to be Loaded`.red);
-                } catch (err) {
-                    console.log(`[${mdl}] `.green + `Something went wrong in ${files[i]} (${err})`.red);
-                };
+                console.log(`[${mdl}] `.green + `${files[i]} is not Module to be Loaded or Something went wrong`.red);
             };
-        }
+        };
     });
-}
+};
